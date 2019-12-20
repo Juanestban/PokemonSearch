@@ -76,7 +76,7 @@ h1, h2, h3 {
 }
 
 .search {
-    background-color:;
+    /*background-color:;                        Pendiente*/
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -158,8 +158,8 @@ h1, h2, h3 {
 
 .absolutePosition {
     position: absolute;
-    left: 83.5%;
-    top: 145px;
+    left: 82.2%;
+    top: 150px;
 }
 
 .imgColumna {
