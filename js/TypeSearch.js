@@ -6,8 +6,35 @@ let Sexo = document.getElementById('');
 
 let Portada = document.getElementById('pokemon')
 let shiny = false;
+let Enter = 13;
 
 //TypeBySearch
+
+//Evento para capturar las funciones del teclado
+
+window.onload = function () {
+    //document.onkeyup = muestraInformacion;
+    //document.onkeypress = muestraInformacion;
+    document.onkeydown = muestraInformacion;
+}
+
+function muestraInformacion(elEvento) {
+    var evento = window.event || elEvento;
+    /*
+    var info = '';
+
+    var mensaje = `Propiedad keyCode: ${evento.keyCode}`
+    */
+    if (evento.keyCode == Enter) {
+        SeachByType();
+    }
+    /*
+    info += mensaje;
+    console.log(info);
+    */
+}
+
+// ---------------- // ---------------- // ---------------- // ----------------
 
 const SeachByType = () => {
     let buscador = search.value.toLowerCase();            //Palabra a buscar
@@ -27,30 +54,29 @@ function salidaHTML(datosJson) {
     const resultadosAll = datosJson;
 
     const SeachPokemon = `
-        <div class="contenidoImg">
-            <div class="absolutePosition"
-                <h3>${resultadosAll.id}</h3>
-            </div>
-            <div class="col imgColumbna">
-                <img id="imgPokemon" class="pokemonesImg" src="${resultadosAll.sprites.front_default}">
-                <img id="backImg" class="pokemonesImg" src="${resultadosAll.sprites.back_default}">
-            </div>
-        </div>
-
-        <div class="row Portada">
-            <div class="referenciado">
-                <h3>${resultadosAll.id}</h3>
-            </div>
-            <div class="row centradoPortada">
-                <div class="NombrePoke">
-                    <h2>${resultadosAll.name}</h2>
+        <div class="pokemonContent">
+            <div class="contenidoImg">
+                <div class="absolutePosition"
+                    <h3>${resultadosAll.id}</h3>
                 </div>
-                <div class="col SexoPokemonn">
-                    <div class="signo" id="signo">
-                        <button onclick="sexo('${resultadosAll.sprites.front_default}', '${resultadosAll.sprites.back_default}')"><img src="img/hombre.png"></button>
-                        <button onclick="sexo('${resultadosAll.sprites.front_female}', '${resultadosAll.sprites.back_female}')"><img src="img/mujer.png"></button>
+                <div class="col imgColumna">
+                    <img id="imgPokemon" class="pokemonesImg" src="${resultadosAll.sprites.front_default}">
+                    <img id="backImg" class="pokemonesImg" src="${resultadosAll.sprites.back_default}">
+                </div>
+            </div>
+
+            <div class="row Portada">
+                <div class="row centradoPortada">
+                    <div class="NombrePoke">
+                        <h2>${resultadosAll.name}</h2>
                     </div>
-                    <button id="ButonStateShiny" onclick="StateShiny('${resultadosAll.sprites.front_default}', '${resultadosAll.sprites.back_default}', '${resultadosAll.sprites.front_female}', '${resultadosAll.sprites.back_female}', '${resultadosAll.sprites.front_shiny}', '${resultadosAll.sprites.back_shiny}', '${resultadosAll.sprites.front_shiny_female}', '${resultadosAll.sprites.back_shiny_female}')">Shiny OFF</button>
+                    <div class="col SexoPokemonn">
+                        <div class="signo" id="signo">
+                            <button onclick="sexo('${resultadosAll.sprites.front_default}', '${resultadosAll.sprites.back_default}')"><img src="img/hombre.png"></button>
+                            <button onclick="sexo('${resultadosAll.sprites.front_female}', '${resultadosAll.sprites.back_female}')"><img src="img/mujer.png"></button>
+                        </div>
+                        <button id="ButonStateShiny" onclick="StateShiny('${resultadosAll.sprites.front_default}', '${resultadosAll.sprites.back_default}', '${resultadosAll.sprites.front_female}', '${resultadosAll.sprites.back_female}', '${resultadosAll.sprites.front_shiny}', '${resultadosAll.sprites.back_shiny}', '${resultadosAll.sprites.front_shiny_female}', '${resultadosAll.sprites.back_shiny_female}')">Shiny OFF</button>
+                    </div>
                 </div>
             </div>
         </div>
