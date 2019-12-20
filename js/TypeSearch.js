@@ -124,3 +124,27 @@ let StateShiny = (skinDefault, BackSkinDefault, skinFemale, BackSkinFemale, skin
 }
 
 //ByLabels
+
+
+/*
+ERRORES POR SOLUCIONAR
+
+1. Img null (
+    -parte del boton hembra;
+    -partes donde pueda aparecer macho;
+    -parte del boton modo shiny macho;
+    -parte del boton modo shiny hembra;
+)
+
+2. Añadir estilos faltantes en la parte del buscador (background)
+
+3. Falta añadir parte de pokemones (
+    -Pre-Evoluciones;
+    -Evolucion;
+)
+
+4. Error al no encontrar algun pokemon del buscador(
+    -no encontrado;
+    -Mal escrito;
+)
+*/
