@@ -48,6 +48,7 @@ const SeachByType = () => {
 
     }
     Pokemons(buscador);
+    shiny = false;
 }
 
 function salidaHTML(datosJson) {
