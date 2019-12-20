@@ -29,7 +29,7 @@ function salidaHTML(datosJson) {
     const SeachPokemon = `
         <div class="contenidoImg">
             <div class="absolutePosition"
-                <h3>${resultadosAll.order}</h3>
+                <h3>${resultadosAll.id}</h3>
             </div>
             <div class="col imgColumbna">
                 <img id="imgPokemon" class="pokemonesImg" src="${resultadosAll.sprites.front_default}">
@@ -39,7 +39,7 @@ function salidaHTML(datosJson) {
 
         <div class="row Portada">
             <div class="referenciado">
-                <h3>${resultadosAll.order}</h3>
+                <h3>${resultadosAll.id}</h3>
             </div>
             <div class="row centradoPortada">
                 <div class="NombrePoke">
